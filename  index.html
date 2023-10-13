@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- Przepraszam, iż listy są tak brzydkie, lecz nie wymyśliłem jak je zrobić ładiejsze, a muszę już odsyłać pracę.:  -->
+
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+    <title>BETULA</title>
+  </head>
+  <body>
+      <!--Nagłówek -->
+      <div id="header">
+        <div id="logo">
+        <span style="--i:1">B</span>
+         <span style="--i:2">E</span>
+         <span style="--i:3">T</span>
+         <span style="--i:4">U</span>
+         <span style="--i:5">L</span>
+         <span style="--i:6">A</span>
+         </div>
+         <!-- przyciski logowania i rejestracji(rejestracji nie działa) -->
+         <div id="przycisk1">
+           <button class="button1" type="button" name="button">Sign up</button>
+         </div>
+         <div id="przycisk2">
+           <button class="button1" onclick="document.getElementById('id01').style.display='block'"  type="button" name="button">Log in</button>
+         </div>
+      </div>
+      <!-- Katalog(lewy div) -->
+      <div id="katalog">
+          <ul>
+            <li><a href="#">Główna strona</a></li>
+            <li><a href="index0.html">Literatura</a></li>
+            <li><a href="index1.html">Tutoriale</a></li>
+            <li><a href="index2.html">Blog</a></li>
+            <li><a href="index3.html">Kontakt</a></li>
+          </ul>
+      </div>
+      <!-- Main(środkowy div) -->
+      <div id="main">
+        <!-- komterery(flip) -->
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="html.png" alt="Paris" style="width:100%;height:100%">
+            </div>
+            <div class="flip-box-back">
+              <h2>HTML</h2>
+              <p class="p1" >HTML pozwala opisać strukturę informacji zawartych wewnątrz strony internetowej, nadając odpowiednie znaczenie semantyczne poszczególnym fragmentom tekstu – formując hiperłącza, akapity, nagłówki, listy – oraz osadza w tekście dokumentu obiekty plikowe, na przykład multimedia, lub elementy baz danych, na przykład interaktywne formularze danych.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="css.png" alt="Paris" style="width:100%;height:100%">
+            </div>
+            <div class="flip-box-back">
+              <h2>CSS</h2>
+              <p class="p1">Arkusz stylów CSS to lista dyrektyw (tzw. reguł) ustalających w jaki sposób ma zostać wyświetlana przez przeglądarkę internetową zawartość wybranego elementu (lub elementów) (X)HTML lub XML. Można w ten sposób opisać wszystkie pojęcia odpowiedzialne za prezentację elementów dokumentów internetowych, takie jak rodzina czcionek, kolor tekstu, marginesy, odstęp międzywierszowy lub nawet pozycja danego elementu względem innych elementów bądź okna przeglądarki. </p>
+            </div>
+          </div>
+        </div>
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="js.png" alt="Paris" style="width:100%;height:100%">
+            </div>
+            <div class="flip-box-back">
+              <h2>JAVASCRIPT</h2>
+              <p class="p1">ajczęściej spotykanym zastosowaniem języka JavaScript są strony internetowe. Skrypty te służą najczęściej do zapewnienia interakcji poprzez reagowanie na zdarzenia, walidacji danych wprowadzanych w formularzach lub tworzenia złożonych efektów wizualnych. Skrypty JavaScriptu uruchamiane przez strony internetowe mają znacznie ograniczony dostęp do komputera użytkownika.</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <!-- footer(dolny div) -->
+      <div id="footer">
+        <h3>© 2023 Privacy policy Manage cookies</h3>
+      </div>
+      <!-- divy menu logowania -->
+      <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="Nie_dziala.php" method="post">
+
+
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button id="lg" type="submit"><p class="p3" >LOGIN</p></button>
+
+          </div>
+
+
+        </form>
+      </div>
+
+
+      </div>
+<script>
+ // skrypt zamykający okno logowania przy kliknięciu w losowe miejsce za oknem
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+  </body>
+</html>
